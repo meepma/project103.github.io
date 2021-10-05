@@ -1,0 +1,13 @@
+.heading{
+    width:80%;
+    font-size: 25px;
+}
+body{
+    background-color: coral;
+    color:white;
+}
+#camera,#result{
+    border: 5px ridge white;
+    width: 350px;
+    height: 350px;
+} 
