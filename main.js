@@ -16,3 +16,18 @@ classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/r
 function modelLoaded(){
     console.log("model has been loaded");
 }
+function identify(){
+    imp=document.getElementById("meep");
+    classifier.classify(imp,gotResult);
+}
+function gotResult(error,results){
+if(error){
+    console.error(error);
+}
+else{
+    console.log(results);
+    document.getElementById("objects").innerHTML=results[0].label;
+    document.getElementById("Accuracy").innerHTML=results[0].confidence.toFixed(3);
+
+}
+}
